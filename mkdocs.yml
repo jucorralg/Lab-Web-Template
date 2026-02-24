@@ -1,6 +1,6 @@
 ---
 site_name: "Webex Contact Center Bootcamp: Proactive Debt collection and Contention resolution" 
-site_description: "Webex Contact Center Bootcamp: Proactive Debt collection and Contention resolution" # must be same as "site_name"
+site_description: "Proactive Debt collection and Contention resolution" # must be same as "site_name"
 site_author: Juan Corral et.al.
 copyright: Copyright &copy; 2026 Cisco
 theme:
