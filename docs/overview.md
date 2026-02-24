@@ -49,9 +49,9 @@ To participate in the labs, ensure you have access to the following resources:
 
 Furthermore, you will need the following features enabled in your tenant: 
 
-    :white_check_mark: AI Agent
-    :white_check_mark: AI Assistant
-    :white_check_mark: Cisco Campaign Manager
+    ✅ AI Agent
+    ✅ AI Assistant
+    ✅ Cisco Campaign Manager
 
 For the purpose of the use case, additional tools are required throughout the labs: 
 
