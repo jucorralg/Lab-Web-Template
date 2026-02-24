@@ -1,8 +1,8 @@
 ---
-site_name: "LAB-2851: Integrating Customer Journey Data Services for enhanced customer experiences" # This must begin with the session ID, e.g. LABXXX-1234 This is my Cisco Live Lab
-site_description: "Integrating Customer Journey Data Services for enhanced customer experiences" # must be same as "site_name"
-site_author: Luis Garcia Delgado
-copyright: Copyright &copy; 2025 Cisco
+site_name: "Webex Contact Center Bootcamp: Proactive Debt collection and Contention resolution" 
+site_description: "Webex Contact Center Bootcamp: Proactive Debt collection and Contention resolution" # must be same as "site_name"
+site_author: Juan Corral et.al.
+copyright: Copyright &copy; 2026 Cisco
 theme:
   name: material
   features:
