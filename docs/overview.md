@@ -4,7 +4,7 @@
 
 This bootcamp focuses on a high-impact use case for Retail Banking (FinServ): 
 
-Proactive Debt Collection and Contention Resolution. 
+> **Proactive Debt Collection and Contention Resolution** 
 
 We will see how streamlining debt recovery can be achieved while enhancing customer experience. The scenario centers on a proactive journey where the bank identifies customers with upcoming debt maturity dates and initiates contact through automated channels.
 
@@ -43,14 +43,14 @@ Enable RT Assist to provide live guidance, automate card-locking in the backend,
 
 To participate in the labs, ensure you have access to the following resources:
 
-- Your Partner tenant (Gold Tenant or NFR Demo/Lab)
-- Your <a href="https://admin.webex.com/login" target="_blank">Control Hub portal</a>
+- Your Partner tenant (*Gold Tenant* or *NFR Demo/Lab*)
+- Your [Control Hub Portal](https://admin.webex.com/login) 
 - Your Campaign Management portal
 
 Furthermore, you will need the following features enabled in your tenant: 
-- AI Agent
-- AI Assistant
-- Cisco Campaign Manager
+- [x] AI Agent
+- [x] AI Assistant
+- [x] Cisco Campaign Manager
 
 For the purpose of the use case, additional tools are required throughout the labs: 
 
@@ -59,8 +59,8 @@ For the purpose of the use case, additional tools are required throughout the la
 
 ## Disclaimer
 
-- The use case and the data used in this Bootcamp are fiction and do not correspond to any real customer or user.
-- The availability of the Novapay Payment Service is guaranteed for the duration of the Bootcamp. Usagefor demos outside the purpose of the Bootcamp labs is under the partner responsibility and Cisco does not guarantee a continuous maintenance of the service. 
-- Although the lab design and configuration examples could be used as a reference, for design related questions please contact your representative at Cisco, or a Cisco partner.
+- All use cases and data presented in this Bootcamp are fictional and do not correspond to any real customer or user.
+- The availability of the NovaPay Payment Service is guaranteed for the duration of the Bootcamp only. Any use of the service for demonstrations outside the scope of the Bootcamp labs is the responsibility of the partner, and Cisco does not guarantee the continued availability or maintenance of the service in such cases.
+- While the lab design and configuration examples may be used as reference material, for any design-related questions please contact your Cisco representative or an authorized Cisco partner.
 
 
