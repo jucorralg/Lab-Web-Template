@@ -35,7 +35,7 @@ theme:
   favicon: template_assets/webex75.png
 extra:
   generator: false
-  repo: "https://github.com/WebexCC-SA/WebexCC-SA/LAB-2851.git"
+  repo: "https://github.com/jucorralg/Lab-Web-Template.git"
   site_event: test
 extra_css:
   - stylesheets/extra.css
@@ -88,6 +88,7 @@ nav:
   - Home: index.md
   - Lab:
       - Overview: overview.md
+      - Lab 0 - testing md file: lab0_testing.md
       - Lab 1 - Using Postman to interact with CJDS.: lab1_bruno.md
       - Lab 2 - CJDS Identity Management, Progressive Profiles and Actions.: lab2_query_JDS.md
       - Lab 3 - IVR flow integration with CJDS: lab3_injecting_JDS_event.md
