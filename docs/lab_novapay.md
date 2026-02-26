@@ -4,8 +4,9 @@ The purpose of this lab is to build a fake payment service for demo purposes. Th
 
 1. A mockpayment frontend web site that mimics a typical payment user interface. It shoud offer an interface for the user to enter the payment amount, the card option (visa, master card...) and the card details (name, number, expiration date and cvv). It should allow a user to enter the data and click on a pay button to confirm the payment. The web site should respond with a confirmation message that the payment has been completed. The user will see the amount payed, the last 4 digits of its credit card and a mock confirmation number.
 
-⚠️ Important: This is a UI simulation only. It does not process real payments, store data, or connect to any backend.
-Note: The application does not run any format validation on the input data
+???+ Important: 
+	This is a UI simulation only. It does not process real payments, store data, or connect to any backend.
+	Note: The application does not run any format validation on the input data
 
 2. A web service that exposes an API to allow a third party to open a payment session for the customer to pay and complete the payment. It shall also provide the session status to check whether the payment has been completed. 
 
@@ -96,17 +97,72 @@ You will create your own copy of the NovaPay implementation currently hosted in 
 
 ---
 
-## Import Repository
+???+ Import Repository
 
-1. Log in to your **GitHub Account**
-2. Navigate to: https://github.com/new/import
-3. Populate the fields as follows:
+	1. Log in to your **GitHub Account**
+	2. Navigate to: https://github.com/new/import
+	3. Populate the fields as follows:
 
-| Field | Value |
-|------|------|
-| Repository URL | https://github.com/cx-partner/NovaPay |
-| Owner | Your GitHub Username |
-| Repository Name | NovaPay |
+	| Field | Value |
+	|------|------|
+	| Repository URL | https://github.com/cx-partner/NovaPay |
+	| Owner | Your GitHub Username |
+	| Repository Name | NovaPay |
 
-4. Click:
+	
+
+	???+ Import the Repository to GitHub GIF
+
+		<figure markdown>
+            ![Import GitHub repository](./assets/Import GitHub Repository.gif)
+            </figure>
+
+    4. Click: ***Begin Import***
+
+    GitHub will start importing the repository. After completion, you will now have:
+    	´´´
+    	https://github.com/<your-username>/NovaPay
+    	´´´
+
+---
+
+# 🔹 STEP 2 — Configure GitHub pages (Frontend Hosting)
+
+NovaPay frontend will be hosted publicly using GitHub Pages.
+
+---
+
+???+ Enable GitHub Pages
+
+	You need first to enable GitHub Pages in your new repository. 
+
+	1. Navigate to your repository in GitHub
+
+	```
+	NovaPay → Settings → Pages
+	``
+	2. under **Source**, select: *Deploy from Branch*
+	3. under **Branch**, select: 
+		Branch: *main*
+		Folder: */(root)
+	4. Click on **Save**
+
+	???+ Enable GitHub Pages GIF
+		<figure markdown>
+            ![Enable GitHub Pages](./assets/Enable GitHub Pages.gif)
+            </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
