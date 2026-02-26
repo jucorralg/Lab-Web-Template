@@ -2,15 +2,16 @@
 
 The purpose of this lab is to build a fake payment service for demo purposes. The outcome of this lab is twofod: 
 
-1. A mockpayment frontend web site that mimics a typical payment user interface. It shoud offer an interface for the user to enter the payment amount, the card option (visa, master card...) and the card details (name, number, expiration date and cvv). It should allow a user to enter the data and click on a pay button to confirm the payment. The web site should respond with a confirmation message that the payment has been completed. The user will see the amount payed, the last 4 digits of its credit card and a mock confirmation number.
+1. A mockpayment frontend web site that mimics a typical payment user interface. The frontend offers a user interface to enter the payment data: amount, card option (visa, master card...) and  card details (name, number, expiration date and cvv). It allows a user to enter the data and click on a pay button to confirm the payment. The web site responds with a confirmation message that the payment has been completed. The user will see the amount payed, the last 4 digits of its credit card and a mock confirmation number.
 
-???+ warning  
-	This is a UI simulation only. It does not process real payments, store data, or connect to any backend.
-	Note: The application does not run any format validation on the input data
+	???+ warning  
+		This is a UI simulation only. It does not process real payments, store data, or connect to any backend.
 
-2. A web service that exposes an API to allow a third party to open a payment session for the customer to pay and complete the payment. It shall also provide the session status to check whether the payment has been completed. 
+		Note: The application does not run any format validation on the input data
 
-This lab provides a **step-by-step guide** to replicate and deploy your own version of the **NovaPay Payment Service** using the existing implementation available in the `MockPayment` GitHub repository.
+2. A web service that exposes an API to allow a third party to open a payment session for the customer to pay and complete the payment. It also provides the session status to check whether the payment has been completed. 
+
+This lab provides a **step-by-step guide** to replicate and deploy your own version of the **NovaPay Payment Service** using the existing implementation available in the [Novapay](https://github.com/cx-partner/NovaPay) GitHub repository.
 
 ---
 
@@ -49,7 +50,7 @@ In order to successfully deploy the NovaPay service, the following applications 
 
 3. Testing Tools
 
-	- Postman (or similar API client) - Test NovaPay REST APIs. Simulates client app behavior and validates session creation and payment confirmation.
+	- Postman (or Bruno or similar API client) - Test NovaPay REST APIs. Simulates client app behavior and validates session creation and payment confirmation.
 
 
 
@@ -82,8 +83,7 @@ flowchart LR
 In this lab you will perform the following tasks:
 
 1. Replicate the NovaPay GitHub Repository  
-2. Modify project configuration to reflect your new service  
-3. Configure GitHub Pages to host the payment frontend  
+2. Configure GitHub Pages to host the payment frontend  
 4. Deploy the Backend API on Render  
 5. Deploy the Redis Key-Value Store on Render  
 6. Configure environment variables  
@@ -93,20 +93,20 @@ In this lab you will perform the following tasks:
 
 # 🔹 STEP 1 — Replicate the NovaPay Repository
 
-You will create your own copy of the NovaPay implementation in your own repository. Currently, all the assets for the service are located in https://github.com/cx-partner/NovaPay
+You will create your own copy of the NovaPay implementation in your own repository. Currently, all the assets for the service are located in a GitHub hosted repository: [Novapay](https://github.com/cx-partner/NovaPay), owned by Cisco.
 
 ---
 
 ???+ "Import NovaPay GitHub Repository"
 
 	1. Log in to your **GitHub Account**
-	2. Navigate to: https://github.com/new/import
+	2. Navigate to: <a href="https://github.com/new/import" target="_blank"> 
 	3. Populate the fields as follows:
 
 	| Field | Value |
 	|------|------|
 	| Repository URL | https://github.com/cx-partner/NovaPay |
-	| Owner | Your GitHub Username |
+	| Owner | <Your GitHub Username> |
 	| Repository Name | NovaPay |
 
 	
@@ -120,9 +120,9 @@ You will create your own copy of the NovaPay implementation in your own reposito
     4. Click: ***Begin Import***
 
     GitHub will start importing the repository. After completion, you will now have:
-    	´´´
-    	https://github.com/<your-username>/NovaPay
-    	´´´
+    	
+    	<a href="https://github.com/<your-username>/NovaPay" target="_blank">
+    
 
 ---
 
@@ -140,14 +140,14 @@ NovaPay frontend will be hosted publicly using GitHub Pages.
 
 	```
 	NovaPay → Settings → Pages
-	``
+	```
 	2. under **Source**, select: *Deploy from Branch*
 	3. under **Branch**, select: 
-		Branch: *main*
-		Folder: */(root)
+		- Branch: *main*
+		- Folder: */(root)*
 	4. Click on **Save**
 
-	???+ Enable GitHub Pages GIF
+	???+ "Enable GitHub Pages GIF"
 		<figure markdown>
             ![Enable GitHub Pages](./assets/Enable GitHub Pages.gif)
             </figure>
@@ -178,11 +178,11 @@ NovaPay frontend will be hosted publicly using GitHub Pages.
 
 	If you do not have a Render account, navigate to:
 
-	[Render Site](https://render.com)
+	<a href="https://render.com" target="_blank">
 
 	Create an account:
-	1. Click on *Start for free*
-	2. Create your render account
+		1. Click on *Start for free*
+		2. Create your render account
 
 	???+ tip "Leverage your GitHub user"
 
@@ -256,7 +256,7 @@ NovaPay frontend will be hosted publicly using GitHub Pages.
             ![Create Redis instance](./assets/Create Redis instance.gif)
             </figure>
 
-???* "Obtain Redis Internal URL"
+???+ "Obtain Redis Internal URL"
 
 	1. After creation, navigate to 
 
@@ -309,9 +309,9 @@ Once deployed, your NovaPay API will be accessible via:
 
 ```https://<your-render-url>.onrender.com```
 
-wher your-render-url is of the type *novapay-xxxx*
+where your-render-url is of the type *novapay-xxxx*
 
-Verify backend health: 
+Verify the backend health: 
 
 ```GET https://<your-render-url>.onrender.com/health ```
 
@@ -351,14 +351,14 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 	- URL: 
 		```https://novapay-xxxx.onrender.com/api/create-session```
 	- Body:
-		```json
+		```JSON
 		{
   			"amount": 120,
   			"customerEmail": "test@test.com",
   			"agentId": "agent01"
 		}```
 	- Response:
-		```json
+		```JSON
 		{
   			"sessionId": "xxxx",
   			"paymentUrl": "https://<your-username>.github.io/NovaPay/backend/frontend/index.html?sessionId=xxxxxx&amount=xxx"
@@ -371,7 +371,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 		```https://novapay-xxxx.onrender.com/api/session-status?sessionId=xxxx```
 	- Response:
 		Payment pending: 
-		```json
+		```JSON
 		{
 		    "agentId": "agent123",
 		    "amount": 2500,
@@ -380,7 +380,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 		}```
 
 		Payment completed:
-		```json
+		```JSON
 		{
 		    "agentId": "agent123",
 		    "amount": 2500,
@@ -396,7 +396,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 	- URL: 
 		```https://novapay-xxxx.onrender.com/api/pay```
 	- Request:
-		```json
+		```JSON
 		{
 		  "sessionId": "123434523452345",
 		  "amount": 432421,
@@ -406,7 +406,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 		  "cvv": "123"
 		}```
 	- Response:
-		```json
+		```JSON
 		{
 		    "status": "success",
 		    "amount": 2500,
@@ -423,6 +423,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 	- Response:
 		```Backend is running```
 
+--- 
 
 # ✅ Lab Completion
 
@@ -444,6 +445,7 @@ At this point, you have successfully:
 
 You now have a fully operational NovaPay Mock Payment Service running on the Internet.
 
+---
 
 # 🛠️ Troubleshooting Guide
 
@@ -452,15 +454,16 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 1. GitHub Pages Payment Page Shows 404 Error"
 	🔍 Symptoms
 
-	When accessing the payment URL:
+		When accessing the payment URL:
 
-	```https://<yourusername>.github.io/novapay/?sessionId=12345```
+		```https://<yourusername>.github.io/novapay/?sessionId=12345```
 
-	You receive:
+		You receive:
 
-	```404 Page Not Found```
+		```404 Page Not Found```
 
 	✅ Possible Causes & Solutions
+
 	| Cause                                  | Solution                                                                     |
 	| -------------------------------------- | ---------------------------------------------------------------------------- |
 	| GitHub Pages not enabled               | Go to Repository → Settings → Pages and enable deployment from `main` branch |
@@ -468,13 +471,16 @@ This section describes the most common issues encountered during the deployment 
 	| Repository renamed but URL not updated | Update payment URL in `server.js`                                            |
 	| Changes not committed                  | Commit and push latest changes to GitHub                                     |
 
+
 ???+ "❌ 2. Payment Page Loads but Shows "Session Not Found""
-	🔍 Symptoms
+		🔍 Symptoms
 
-	The payment page opens correctly but displays:
+		The payment page opens correctly but displays:
 
-	```Session Not Found```
+		```Session Not Found```
+
 	✅ Possible Causes & Solutions
+
 	| Cause                                         | Solution                                      |
 	| --------------------------------------------- | --------------------------------------------- |
 	| Backend API URL still pointing to MockPayment | Update API endpoint in `/frontend/index.html` |
@@ -484,12 +490,14 @@ This section describes the most common issues encountered during the deployment 
 
 
 ???+ "❌ 3. Backend Fails to Connect to Redis"
-	🔍 Symptoms
+		🔍 Symptoms
 
-	Render logs show:
+		Render logs show:
 
-	```Error: connect ECONNREFUSED 127.0.0.1:6379``
+		```Error: connect ECONNREFUSED 127.0.0.1:6379``
+	
 	✅ Possible Causes & Solutions
+
 	| Cause                                  | Solution                                       |
 	| -------------------------------------- | ---------------------------------------------- |
 	| Redis URL still set to localhost       | Replace Redis config in `/backend/server.js`   |
@@ -500,16 +508,15 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 4. CORS Error When Loading Payment Session"
 	🔍 Symptoms
 
-	Browser developer console shows:
+		Browser developer console shows:
 
-	```Access to fetch at 'https://novapay-api.onrender.com' from origin 'https://yourusername.github.io' has been blocked by CORS policy```
+		```Access to fetch at 'https://novapay-api.onrender.com' from origin 'https://yourusername.github.io' has been blocked by CORS policy```
 	
 	✅ Solution
 
 	Ensure CORS is enabled in your backend.
 
 	Install CORS middleware:
-
 	```npm install cors```
 
 	Add the following to your server.js:
@@ -523,15 +530,15 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 5. Render Deployment Fails During Build"
 	🔍 Symptoms
 
-	Deployment logs show:
+		Deployment logs show:
 
-	```npm ERR! missing script: start```
+		```npm ERR! missing script: start```
 
 	✅ Solution
 
 	Ensure your /backend/package.json includes:
 
-	```json
+	```JSON
 	"scripts": {
 	  "start": "node server.js"
 	}```	
@@ -541,11 +548,12 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 6. Postman API Tests Fail"
 	🔍 Symptoms
 
-	Requests to create or retrieve payment sessions return:
+		Requests to create or retrieve payment sessions return:
 
-	```500 Internal Server Error```
+		```500 Internal Server Error```
 	
 	✅ Possible Causes & Solutions
+
 	| Cause                  | Solution                                |
 	| ---------------------- | --------------------------------------- |
 	| Backend not deployed   | Verify Render deployment                |
@@ -556,11 +564,12 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 7. Payment Status Never Updates (Desktop Polling)"
 	🔍 Symptoms
 
-	Desktop agent keeps polling but always receives:
+		Desktop agent keeps polling but always receives:
 
-	```status: pending```
+		```status: pending```
 
 	✅ Possible Causes & Solutions
+	
 	| Cause                         | Solution                            |
 	| ----------------------------- | ----------------------------------- |
 	| Payment not submitted         | Click "Confirm Payment" in frontend |
