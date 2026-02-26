@@ -100,7 +100,7 @@ You will create your own copy of the NovaPay implementation in your own reposito
 ???+ "Import NovaPay GitHub Repository"
 
 	1. Log in to your **GitHub Account**
-	2. Navigate to: <a href="https://github.com/new/import" target="_blank"> 
+	2. Navigate to: <a href="https://github.com/new/import" target="_blank">Import Repository</a> 
 	3. Populate the fields as follows:
 
 	| Field | Value |
@@ -119,9 +119,9 @@ You will create your own copy of the NovaPay implementation in your own reposito
 
     4. Click: ***Begin Import***
 
-    GitHub will start importing the repository. After completion, you will now have:
+    GitHub will start importing the repository. After completion, you will now have your own NovaPay repository in GitHub:
     	
-    	<a href="https://github.com/<your-username>/NovaPay" target="_blank">
+    	```https://github.com/<your-username>/NovaPay```
     
 
 ---
@@ -178,7 +178,7 @@ NovaPay frontend will be hosted publicly using GitHub Pages.
 
 	If you do not have a Render account, navigate to:
 
-	<a href="https://render.com" target="_blank">
+	<a href="https://render.com" target="_blank">Render</a> 
 
 	Create an account:
 		1. Click on *Start for free*
@@ -351,14 +351,14 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 	- URL: 
 		```https://novapay-xxxx.onrender.com/api/create-session```
 	- Body:
-		```JSON
+		``` JSON
 		{
   			"amount": 120,
   			"customerEmail": "test@test.com",
   			"agentId": "agent01"
 		}```
 	- Response:
-		```JSON
+		``` JSON
 		{
   			"sessionId": "xxxx",
   			"paymentUrl": "https://<your-username>.github.io/NovaPay/backend/frontend/index.html?sessionId=xxxxxx&amount=xxx"
@@ -371,7 +371,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 		```https://novapay-xxxx.onrender.com/api/session-status?sessionId=xxxx```
 	- Response:
 		Payment pending: 
-		```JSON
+		``` JSON
 		{
 		    "agentId": "agent123",
 		    "amount": 2500,
@@ -380,7 +380,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 		}```
 
 		Payment completed:
-		```JSON
+		``` JSON
 		{
 		    "agentId": "agent123",
 		    "amount": 2500,
@@ -396,7 +396,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 	- URL: 
 		```https://novapay-xxxx.onrender.com/api/pay```
 	- Request:
-		```JSON
+		``` JSON
 		{
 		  "sessionId": "123434523452345",
 		  "amount": 432421,
@@ -406,7 +406,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 		  "cvv": "123"
 		}```
 	- Response:
-		```JSON
+		``` JSON
 		{
 		    "status": "success",
 		    "amount": 2500,
@@ -538,7 +538,7 @@ This section describes the most common issues encountered during the deployment 
 
 	Ensure your /backend/package.json includes:
 
-	```JSON
+	``` JSON
 	"scripts": {
 	  "start": "node server.js"
 	}```	
@@ -569,7 +569,7 @@ This section describes the most common issues encountered during the deployment 
 		```status: pending```
 
 	✅ Possible Causes & Solutions
-	
+
 	| Cause                         | Solution                            |
 	| ----------------------------- | ----------------------------------- |
 	| Payment not submitted         | Click "Confirm Payment" in frontend |
