@@ -484,11 +484,11 @@ This section describes the most common issues encountered during the deployment 
 
 
 ???+ "❌ 2. Payment Page Loads but Shows "Session Not Found""
-		🔍 Symptoms
+	🔍 Symptoms
 
 		The payment page opens correctly but displays:
 
-		Session Not Found
+			Session Not Found
 		
 
 	✅ Possible Causes & Solutions
@@ -502,12 +502,11 @@ This section describes the most common issues encountered during the deployment 
 
 
 ???+ "❌ 3. Backend Fails to Connect to Redis"
-		🔍 Symptoms
+	🔍 Symptoms
 
 		Render logs show:
-
 		
-		Error: connect ECONNREFUSED 127.0.0.1:6379
+			Error: connect ECONNREFUSED 127.0.0.1:6379
 		
 	
 	✅ Possible Causes & Solutions
@@ -525,24 +524,24 @@ This section describes the most common issues encountered during the deployment 
 		Browser developer console shows:
 
 		
-		Access to fetch at 'https://novapay-api.onrender.com' from origin 'https://yourusername.github.io' has been blocked by CORS policy
+			Access to fetch at 'https://novapay-api.onrender.com' from origin 'https://yourusername.github.io' has been blocked by CORS policy
 		
 	
 	✅ Solution
 
 	Ensure CORS is enabled in your backend.
 
-	Install CORS middleware:
+		Install CORS middleware:
 	
-	npm install cors
+		npm install cors
 	
 
 	Add the following to your server.js:
 
-	```javascript 
-	const cors = require("cors");
-	app.use(cors());
-	```
+		```javascript 
+		const cors = require("cors");
+		app.use(cors());
+		```
 
 	Commit and push changes to redeploy in Render.
 
@@ -551,19 +550,18 @@ This section describes the most common issues encountered during the deployment 
 
 		Deployment logs show:
 
-		
-		npm ERR! missing script: start
+			npm ERR! missing script: start
 		
 
 	✅ Solution
 
 	Ensure your /backend/package.json includes:
 
-	```json
-	"scripts": {
-	  "start": "node server.js"
-	}
-	```	
+		```json
+		"scripts": {
+		"start": "node server.js"
+		}
+		```	
 
 	Commit and push changes to GitHub to trigger a new deployment.
 
@@ -572,8 +570,7 @@ This section describes the most common issues encountered during the deployment 
 
 		Requests to create or retrieve payment sessions return:
 
-		
-		500 Internal Server Error
+			500 Internal Server Error
 		
 	
 	✅ Possible Causes & Solutions
@@ -590,8 +587,7 @@ This section describes the most common issues encountered during the deployment 
 
 		Desktop agent keeps polling but always receives:
 
-		
-		status: pending
+			status: pending
 		
 
 	✅ Possible Causes & Solutions
