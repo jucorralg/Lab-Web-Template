@@ -97,7 +97,7 @@ You will create your own copy of the NovaPay implementation in your own reposito
 
 ---
 
-???+ challenge "Import NovaPay GitHub Repository"
+???+ webex "Import NovaPay GitHub Repository"
 
 	1. Log in to your **GitHub Account**
 	2. Navigate to: [Import Repository](https://github.com/new/import) 
@@ -111,7 +111,7 @@ You will create your own copy of the NovaPay implementation in your own reposito
 
 	
 
-	???+ "Import the Repository to GitHub GIF"
+	???+ gif "Import the Repository to GitHub"
 
 		<figure markdown>
             ![Import GitHub repository](./assets/Import GitHub Repository.gif)
