@@ -119,9 +119,9 @@ You will create your own copy of the NovaPay implementation in your own reposito
 
     4. Click: ***Begin Import***
 
-    GitHub will start importing the repository. After completion, you will now have your own NovaPay repository in GitHub:
+    GitHub will start importing the repository. After completion, you will have your own NovaPay repository in GitHub:
     	
-    	```https://github.com/<your-username>/NovaPay```
+    	`https://github.com/<your-username>/NovaPay`
     
 
 ---
