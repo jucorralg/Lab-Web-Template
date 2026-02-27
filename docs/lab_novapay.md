@@ -167,7 +167,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 
 	Take note of this URL. You will need it later. 
 
-	???+ ":material-screenshot: The NovaPay payment Website"
+	???+ info ":material-screenshot: The NovaPay payment Website"
 
 		<figure markdown>
             ![NovaPay website](./assets/NovaPay Website.png)
