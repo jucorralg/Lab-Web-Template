@@ -464,13 +464,13 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 1. GitHub Pages Payment Page Shows 404 Error"
 	🔍 Symptoms
 
-		When accessing the payment URL:
-			
-			https://<yourusername>.github.io/novapay/?sessionId=12345	
+	When accessing the payment URL:
+		
+		https://<yourusername>.github.io/novapay/?sessionId=12345	
 
-		You receive:
+	You receive:
 
-			404 Page Not Found
+		404 Page Not Found
 		
 
 	✅ Possible Causes & Solutions
@@ -486,9 +486,9 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 2. Payment Page Loads but Shows "Session Not Found""
 	🔍 Symptoms
 
-		The payment page opens correctly but displays:
+	The payment page opens correctly but displays:
 
-			Session Not Found
+		Session Not Found
 		
 
 	✅ Possible Causes & Solutions
@@ -504,9 +504,9 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 3. Backend Fails to Connect to Redis"
 	🔍 Symptoms
 
-		Render logs show:
-		
-			Error: connect ECONNREFUSED 127.0.0.1:6379
+	Render logs show:
+	
+		Error: connect ECONNREFUSED 127.0.0.1:6379
 		
 	
 	✅ Possible Causes & Solutions
@@ -521,17 +521,16 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 4. CORS Error When Loading Payment Session"
 	🔍 Symptoms
 
-		Browser developer console shows:
-
-		
-			Access to fetch at 'https://novapay-api.onrender.com' from origin 'https://yourusername.github.io' has been blocked by CORS policy
+	Browser developer console shows:
+	
+		Access to fetch at 'https://novapay-api.onrender.com' from origin 'https://yourusername.github.io' has been blocked by CORS policy
 		
 	
 	✅ Solution
 
 	Ensure CORS is enabled in your backend.
 
-		Install CORS middleware:
+	Install CORS middleware:
 	
 		npm install cors
 	
@@ -568,9 +567,9 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 6. Postman API Tests Fail"
 	🔍 Symptoms
 
-		Requests to create or retrieve payment sessions return:
+	Requests to create or retrieve payment sessions return:
 
-			500 Internal Server Error
+		500 Internal Server Error
 		
 	
 	✅ Possible Causes & Solutions
@@ -585,9 +584,9 @@ This section describes the most common issues encountered during the deployment 
 ???+ "❌ 7. Payment Status Never Updates (Desktop Polling)"
 	🔍 Symptoms
 
-		Desktop agent keeps polling but always receives:
+	Desktop agent keeps polling but always receives:
 
-			status: pending
+		status: pending
 		
 
 	✅ Possible Causes & Solutions
