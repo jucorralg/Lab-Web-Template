@@ -100,7 +100,7 @@ You will create your own copy of the NovaPay implementation in your own reposito
 ???+ "Import NovaPay GitHub Repository"
 
 	1. Log in to your **GitHub Account**
-	2. Navigate to: <a href="https://github.com/new/import" target="_blank">Import Repository</a> 
+	2. Navigate to: [Import Repository](https://github.com/new/import) 
 	3. Populate the fields as follows:
 
 	| Field | Value |
