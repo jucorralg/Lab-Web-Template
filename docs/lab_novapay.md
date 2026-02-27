@@ -167,7 +167,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 
 	Take note of this URL. You will need it later. 
 
-	???+ info ":material-screenshot: The NovaPay payment Website"
+	???+ example "The NovaPay payment Website"
 
 		<figure markdown>
             ![NovaPay website](./assets/NovaPay Website.png)
@@ -192,7 +192,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 
 		Select the GitHub option and enter yout GitHub credentials. That will connect your render workspace with your GitHub environment.
 
-	???+ "Create a Render user GIF"
+	???+ gif "Create a Render user"
 		<figure markdown>
             ![Render User](./assets/Create Render User.gif)
             </figure>
@@ -227,7 +227,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 	???+ warning
 		With the free instance option, your free instance will spin down with inactivity, which can delay requests by 50 seconds or more.
 
-	???+ "Create a Render Web Service GIF"
+	???+ gif "Create a Render Web Service"
 		<figure markdown>
             ![Render Web Service creation](./assets/Create Render User.gif)
             </figure>
@@ -254,7 +254,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 
 	3. Click **Create Key Value Instance**
 
-	???+ "Create Redis Instance GIF"
+	???+ gif "Create Redis Instance"
 
 		<figure markdown>
             ![Create Redis instance](./assets/Create Redis instance.gif)
@@ -272,7 +272,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 
 	3. Copy it, you will need it later. 
 
-	???+ "Redis internal URL IMG"
+	???+ example "Redis internal URL"
 		<figure markdown>
             ![Redis URL](./assets/Redis URL.png)
             </figure>
@@ -281,7 +281,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 
 We need to define a couple of environmental variables. Navigate to your workspace. You should see your two active services now.
 
-???+ "NovaPay services in Render IMG"
+???+ example "NovaPay services in Render"
 	<figure markdown>
             ![NovaPay services in Render](./assets/Render Workspace.png)
             </figure>
@@ -299,7 +299,7 @@ We need to define a couple of environmental variables. Navigate to your workspac
 	4. Click on **Save, Rebuild and Deploy**
 
 
-	???+ "Novapay Environment Variables GIF"
+	???+ gif "Novapay Environment Variables"
 
 		<figure markdown>
             ![NovaPay environment variables](./assets/Novapay environment variables.gif)
@@ -398,7 +398,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 		}
 		```
 
-???+ "Execute Payment"	
+???+ webex "Execute Payment"	
 	- Request: 
 		```POST /api/pay```
 	- URL: 
@@ -425,7 +425,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 		```
 
 
-???+ "Server Healthcheck"
+???+ webex "Server Healthcheck"
 	- Request: 
 		```GET /health```
 	- URL: 
