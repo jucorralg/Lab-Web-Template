@@ -97,7 +97,7 @@ You will create your own copy of the NovaPay implementation in your own reposito
 
 ---
 
-???+ "Import NovaPay GitHub Repository"
+???+ webex "Import NovaPay GitHub Repository"
 
 	1. Log in to your **GitHub Account**
 	2. Navigate to: [Import Repository](https://github.com/new/import) 
@@ -132,7 +132,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 
 ---
 
-???+ "Enable GitHub Pages"
+???+ webex "Enable GitHub Pages"
 
 	Let´s first enable GitHub Pages in your new repository. 
 
@@ -156,7 +156,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
             </figure>
 
 
-???+ "Obtain your Frontend URL"
+???+ webex "Obtain your Frontend URL"
 	Once GitHub pages is deployed, GitHub generates a public URL for you: 
 
 	```
