@@ -72,7 +72,7 @@ markdown_extensions:
   - meta
   - tables
   - pymdownx.details
-  - pymdownx.tasklist
+  - pymdownx.tasklist:
       custom_checkbox: true  # Makes them look much better (Material style)
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
