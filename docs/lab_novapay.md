@@ -128,24 +128,27 @@ You will create your own copy of the NovaPay implementation in your own reposito
 
 # 🔹 STEP 2 — Configure GitHub pages (Frontend Hosting)
 
-NovaPay frontend will be hosted publicly using GitHub Pages.
+The NovaPay frontend that hosts the user interface is hosted publicly using GitHub Pages.
 
 ---
 
 ???+ "Enable GitHub Pages"
 
-	You need first to enable GitHub Pages in your new repository. 
+	Let´s first enable GitHub Pages in your new repository. 
 
 	1. Navigate to your repository in GitHub
 
-	```
-	NovaPay → Settings → Pages
-	```
+		```
+		NovaPay → Settings → Pages
+		```
 	2. under **Source**, select: *Deploy from Branch*
+
 	3. under **Branch**, select: 
 		- Branch: *main*
 		- Folder: */(root)*
+
 	4. Click on **Save**
+	
 
 	???+ "Enable GitHub Pages GIF"
 		<figure markdown>
