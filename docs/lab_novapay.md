@@ -538,30 +538,30 @@ This section describes the most common issues encountered during the deployment 
 
 	Add the following to your server.js:
 
-		```javascript 
-		const cors = require("cors");
-		app.use(cors());
-		```
+	```javascript 
+	const cors = require("cors");
+	app.use(cors());
+	```
 
 	Commit and push changes to redeploy in Render.
 
 ???+ "❌ 5. Render Deployment Fails During Build"
 	🔍 Symptoms
 
-		Deployment logs show:
+	Deployment logs show:
 
-			npm ERR! missing script: start
+		npm ERR! missing script: start
 		
 
 	✅ Solution
 
 	Ensure your /backend/package.json includes:
 
-		```json
-		"scripts": {
-		"start": "node server.js"
-		}
-		```	
+	```json
+	"scripts": {
+	"start": "node server.js"
+	}
+	```	
 
 	Commit and push changes to GitHub to trigger a new deployment.
 
