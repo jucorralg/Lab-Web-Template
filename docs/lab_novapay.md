@@ -141,14 +141,14 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 		```
 		NovaPay → Settings → Pages
 		```
-	2. under **Source**, select: *Deploy from Branch*
+	2. Under **Source**, select: *Deploy from Branch*
 
-	3. under **Branch**, select: 
+	3. Under **Branch**, select: 
 		- Branch: *main*
 		- Folder: */(root)*
 
 	4. Click on **Save**
-	
+
 
 	???+ "Enable GitHub Pages GIF"
 		<figure markdown>
@@ -177,13 +177,14 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 
 # 🔹 STEP 3 — Deploy Backend API on Render
 
-???+ "Create Render Account"
-
+???+ webex "Create Render Account"
+	
 	If you do not have a Render account, navigate to:
 
 	<a href="https://render.com" target="_blank">Render</a> 
+	
 
-	Create an account:
+	Create an account:	
 		1. Click on *Start for free*
 		2. Create your render account
 
@@ -196,7 +197,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
             ![Render User](./assets/Create Render User.gif)
             </figure>
 
-???+ "Create your Web Service"
+???+ webex "Create your Web Service"
 	1. Select:
 		```
 	 	New -> Web Service
@@ -235,7 +236,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 
 ## 🔹 STEP 4 — Deploy Redis Key-Value Store
 
-???+ "Create Redis Instance"
+???+ webex "Create Redis Instance"
 
 	As we are implementing a polling architecture, we need something that can persist payment session state outside of the API process and make it quickly retrievable across multiple stateless requests. Our backend service running in Render is stateless, containerized and restartable at any moment, so we cannot store session state in memory inside Node.js. That’s exactly why Redis is required.
 
@@ -259,7 +260,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
             ![Create Redis instance](./assets/Create Redis instance.gif)
             </figure>
 
-???+ "Obtain Redis Internal URL"
+???+ webex "Obtain Redis Internal URL"
 
 	1. After creation, navigate to 
 
@@ -285,7 +286,7 @@ We need to define a couple of environmental variables. Navigate to your workspac
             ![NovaPay services in Render](./assets/Render Workspace.png)
             </figure>
 
-???+ "Novapay Environment Variables"
+???+ webex "Novapay Environment Variables"
     1. Click on the Novapay service
     2. In the Left Navigation menu, click on **Environment**
     3. Under Environment Variables, add the following variables:
@@ -318,7 +319,7 @@ Verify the backend health:
 
 ```GET https://<your-render-url>.onrender.com/health ```
 
-Expected response:   Backend is running
+Expected response:   *Backend is running*
 
 ---
 
@@ -326,7 +327,7 @@ Expected response:   Backend is running
 
 Your frontend is hosted using GitHub Pages, but it still references the old backend endpoint from the original service. You must update the NovaPay API URL in the payment page to your own API.
 
-???+ "Frontend adaptation"
+???+ webex "Frontend adaptation"
 
 	1. in GitHub, navigate to 
 		```backend/frontend/index.html```
@@ -348,42 +349,45 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
     Test can be done with Bruno or Postman clients. In any case, make sure the desktop versions are installed in the laptop, do not use any web versions. 
 
 
-???+ "Create a Payment session"
+???+ webex "Create a Payment session"
 	- Request: 
 		```POST /api/create-session```
 	- URL: 
 		```https://novapay-xxxx.onrender.com/api/create-session```
 	- Body:
-		``` JSON
+		```json
 		{
   			"amount": 120,
   			"customerEmail": "test@test.com",
   			"agentId": "agent01"
-		}```
+		}
+		```
 	- Response:
-		``` JSON
+		```json
 		{
   			"sessionId": "xxxx",
   			"paymentUrl": "https://<your-username>.github.io/NovaPay/backend/frontend/index.html?sessionId=xxxxxx&amount=xxx"
-		}```	
+		}
+		```	
 
-???+ "Verify Payment status"
+???+ webex "Verify Payment status"
 	- Request: 
 		```GET /api/session-status```
 	- URL: 
 		```https://novapay-xxxx.onrender.com/api/session-status?sessionId=xxxx```
 	- Response:
 		Payment pending: 
-		``` JSON
+		```json
 		{
 		    "agentId": "agent123",
 		    "amount": 2500,
 		    "customerEmail": "jucorral@cisco.com",
 		    "status": "pending"
-		}```
+		}
+		```
 
 		Payment completed:
-		``` JSON
+		```json
 		{
 		    "agentId": "agent123",
 		    "amount": 2500,
@@ -391,7 +395,8 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 		    "status": "completed",
 		    "last4": "1234",
 		    "confirmationCode": "NP-47QXLJCS"
-		}```
+		}
+		```
 
 ???+ "Execute Payment"	
 	- Request: 
@@ -399,7 +404,7 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 	- URL: 
 		```https://novapay-xxxx.onrender.com/api/pay```
 	- Request:
-		``` JSON
+		```json
 		{
 		  "sessionId": "123434523452345",
 		  "amount": 432421,
@@ -407,15 +412,17 @@ Your frontend is hosted using GitHub Pages, but it still references the old back
 		  "cardName": "John Doe",
 		  "expiry": "12/27",
 		  "cvv": "123"
-		}```
+		}
+		```
 	- Response:
-		``` JSON
+		```json
 		{
 		    "status": "success",
 		    "amount": 2500,
 		    "last4": "1234",
 		    "confirmationCode": "NP-47QXLJCS"
-		}```
+		}
+		```
 
 
 ???+ "Server Healthcheck"
@@ -541,10 +548,11 @@ This section describes the most common issues encountered during the deployment 
 
 	Ensure your /backend/package.json includes:
 
-	``` JSON
+	```json
 	"scripts": {
 	  "start": "node server.js"
-	}```	
+	}
+	```	
 
 	Commit and push changes to GitHub to trigger a new deployment.
 
