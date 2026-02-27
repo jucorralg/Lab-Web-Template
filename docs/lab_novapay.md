@@ -465,15 +465,12 @@ This section describes the most common issues encountered during the deployment 
 	🔍 Symptoms
 
 		When accessing the payment URL:
-
-			```
-			https://<yourusername>.github.io/novapay/?sessionId=12345
-			```
+			
+			https://<yourusername>.github.io/novapay/?sessionId=12345	
 
 		You receive:
 
-		
-		404 Page Not Found
+			404 Page Not Found
 		
 
 	✅ Possible Causes & Solutions
