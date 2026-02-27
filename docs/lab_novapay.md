@@ -150,7 +150,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 	4. Click on **Save**
 
 
-	???+ "Enable GitHub Pages GIF"
+	???+ gif "Enable GitHub Pages"
 		<figure markdown>
             ![Enable GitHub Pages](./assets/Enable GitHub Pages.gif)
             </figure>
@@ -167,7 +167,7 @@ The NovaPay frontend that hosts the user interface is hosted publicly using GitH
 
 	Take note of this URL. You will need it later. 
 
-	???+ "The NovaPay payment Website"
+	???+ ":material-screenshot: The NovaPay payment Website"
 
 		<figure markdown>
             ![NovaPay website](./assets/NovaPay Website.png)
