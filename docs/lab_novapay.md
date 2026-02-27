@@ -106,7 +106,7 @@ You will create your own copy of the NovaPay implementation in your own reposito
 	| Field | Value |
 	|------|------|
 	| Repository URL | https://github.com/cx-partner/NovaPay |
-	| Owner | <Your GitHub Username> |
+	| Owner | Your GitHub Username |
 	| Repository Name | NovaPay |
 
 	
